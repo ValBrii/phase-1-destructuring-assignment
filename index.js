@@ -25,6 +25,45 @@ const nestedMuppet = {
   nestedPartner: 'Miss Piggy'
 };
 
+
+const [moo, neigh, baa, oink, cluck] = farmAnimals.split(' ');
+console.log(moo, neigh, baa, oink, cluck);      
+
+const [bessie, dolly, babe, little] = farmAnimals.split(' ').filter(animal => animal !== 'horse');
+console.log(bessie, dolly, babe, little); // Output: cow sheep pig chicken
+
+
+
+// Destructuring to declare the three traditional animal colors
+const [blackAndWhite, black, pink] = farmAnimals.split(' ').filter(animal => animal !== 'chicken' && animal !== 'sheep');
+
+console.log(blackAndWhite, black, pink); // Output: cow horse pig
+
+
+const [red, orange, yellow, green, blue, indigo, violet] = colors;
+console.log(red, orange, yellow, green, blue, indigo, violet); // Output: red orange yellow green blue indigo violet
+
+const [r, o, y, g, b, indg, v] = colors;
+console.log(r, o, y, g, b, indg, v); // Output: red orange yellow green blue violet
+
+const { muppetName, color, song, job, partner } = muppet;
+console.log(muppetName, color, song, job, partner); // Output: Miss Piggy pink Never Before, Never Again Cast member of The Muppet Show Kermit
+
+const {
+  album: {
+    theMuppetMovie: { song2, song4 }
+  },
+  nestedJob: 
+  nestedPartner
+} = nestedMuppet;
+
+console.log(song2, song4, job, partner);
+// Output: Moving Right Along I Hope That Something Better Comes Along Host of The Muppet Show Miss Piggy
+
+
+
+
+
 // Strings
 
 // 1. Use destructuring to assign appropriate variables based on the sounds animals make.
@@ -39,7 +78,7 @@ const nestedMuppet = {
 
 // 5. Some people have a really hard time picking out indigo, so let's leave that one out, using the first letter of each color as the variable names.
 
-// 6. But wait! Indigo is now feeling *super* left out. Let's only assign indigo using indg. 
+// 6. But wai! Indigo is now feeling *super* left out. Let's only assign indigo using indg. 
 
 // Objects
 
